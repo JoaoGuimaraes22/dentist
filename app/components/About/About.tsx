@@ -16,6 +16,7 @@ type Dict = {
   stat_specialists_label: string;
   stat_rating: string;
   stat_rating_label: string;
+  ers_badge: string;
 };
 
 type Props = {
@@ -168,7 +169,7 @@ export default function About({ dict }: Props) {
 
               {/* Floating — ERS badge */}
               <div className="absolute bottom-5 right-5 bg-white rounded-xl shadow-md border border-gray-100 px-3 py-2 text-center">
-                <p className="text-xs font-semibold text-gray-700">Licenciado ERS</p>
+                <p className="text-xs font-semibold text-gray-700">{dict.ers_badge}</p>
                 <p className="text-xs text-gray-400 mt-0.5">E000000</p>
               </div>
             </div>

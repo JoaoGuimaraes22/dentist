@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type Dict = {
   badge: string;
@@ -16,6 +17,8 @@ type Dict = {
   trust_specialists_label: string;
   trust_insurance: string;
   trust_insurance_label: string;
+  float_reviews: string;
+  float_years_label: string;
 };
 
 type Props = {
@@ -111,30 +114,22 @@ export default function HeroContent({ dict }: Props) {
             </div>
           </div>
 
-          {/* Right — image placeholder */}
+          {/* Right — image */}
           <div
             className={`hidden lg:flex items-center py-12 pl-10 transition-all duration-1000 delay-200 ease-out ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
             }`}
           >
             <div className="relative w-full max-w-md mx-auto">
-              {/* Photo placeholder */}
-              <div className="w-full h-[520px] rounded-3xl bg-white border border-gray-200 shadow-md flex flex-col items-center justify-center text-gray-300">
-                <svg
-                  className="w-14 h-14 mb-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <p className="text-sm">Foto da clínica</p>
-                <p className="text-xs mt-1 opacity-60">800 × 1040</p>
+              {/* Photo */}
+              <div className="relative w-full h-130 rounded-3xl overflow-hidden shadow-md">
+                <Image
+                  src="/hero.jpg"
+                  alt="SorrisoPlus — Clínica Dentária"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating — rating */}
@@ -146,7 +141,7 @@ export default function HeroContent({ dict }: Props) {
                   <p className="text-sm font-semibold text-gray-800 leading-none mb-0.5">
                     4.9 / 5
                   </p>
-                  <p className="text-xs text-gray-400">247 avaliações</p>
+                  <p className="text-xs text-gray-400">{dict.float_reviews}</p>
                 </div>
               </div>
 
@@ -158,7 +153,7 @@ export default function HeroContent({ dict }: Props) {
                 >
                   20+
                 </p>
-                <p className="text-xs text-teal-200 mt-0.5">anos</p>
+                <p className="text-xs text-teal-200 mt-0.5">{dict.float_years_label}</p>
               </div>
             </div>
           </div>

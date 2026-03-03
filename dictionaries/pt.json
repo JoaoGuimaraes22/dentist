@@ -23,7 +23,9 @@
     "trust_specialists": "8",
     "trust_specialists_label": "Especialistas",
     "trust_insurance": "8",
-    "trust_insurance_label": "Seguradoras aceites"
+    "trust_insurance_label": "Seguradoras aceites",
+    "float_reviews": "247 avaliações",
+    "float_years_label": "anos"
   },
   "about": {
     "badge": "Sobre nós",
@@ -38,7 +40,8 @@
     "stat_specialists": "8",
     "stat_specialists_label": "Especialistas",
     "stat_rating": "4.9★",
-    "stat_rating_label": "Avaliação média"
+    "stat_rating_label": "Avaliação média",
+    "ers_badge": "Licenciado ERS"
   },
   "services": {
     "badge": "Serviços",
@@ -80,7 +83,8 @@
     "doctor_4_name": "Dr. Miguel Santos",
     "doctor_4_specialty": "Cirurgia Oral · Periodontologia",
     "doctor_4_omd": "OMD nº 45678",
-    "omd_label": "Ordem dos Médicos Dentistas"
+    "omd_label": "Ordem dos Médicos Dentistas",
+    "director_badge": "Diretora Clínica"
   },
   "technology": {
     "badge": "Tecnologia",
@@ -97,7 +101,8 @@
     "tech_5_title": "Raio-X Digital",
     "tech_5_desc": "Radiografias digitais panorâmicas com dose mínima de radiação.",
     "tech_6_title": "Câmara Intraoral",
-    "tech_6_desc": "Visualize em tempo real o interior da sua boca e participe nas decisões do seu tratamento."
+    "tech_6_desc": "Visualize em tempo real o interior da sua boca e participe nas decisões do seu tratamento.",
+    "photo_badge": "Tecnologia de ponta"
   },
   "insurance": {
     "badge": "Seguros & Acordos",
@@ -170,7 +175,16 @@
     "info_hours_weekday": "Segunda–Sexta: 9h–20h",
     "info_hours_saturday": "Sábado: 9h–14h",
     "info_hours_sunday": "Domingo: Encerrado",
-    "whatsapp_cta": "WhatsApp"
+    "whatsapp_cta": "WhatsApp",
+    "form_opt_1": "Dentisteria & Estética",
+    "form_opt_2": "Implantologia",
+    "form_opt_3": "Ortodontia / Invisalign",
+    "form_opt_4": "Cirurgia Oral",
+    "form_opt_5": "Periodontologia",
+    "form_opt_6": "Odontopediatria",
+    "form_opt_7": "Endodontia",
+    "form_opt_8": "Prótese",
+    "form_opt_9": "Higiene Oral"
   },
   "footer": {
     "logo": "SorrisoPlus",
@@ -187,7 +201,9 @@
     "legal_reg": "Reg. Estabelecimento: 0000/2020",
     "legal_omd": "Membro da Ordem dos Médicos Dentistas",
     "copyright": "SorrisoPlus — Clínica Dentária. Todos os direitos reservados.",
-    "address": "Av. de Portugal 45, 2775-602 Carcavelos"
+    "address": "Av. de Portugal 45, 2775-602 Carcavelos",
+    "nav_col_heading": "Clínica",
+    "scroll_top": "Voltar ao topo"
   },
   "bookingBar": {
     "cta": "Marcar Consulta",
