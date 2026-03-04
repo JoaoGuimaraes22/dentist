@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type Dict = {
   badge: string;
@@ -26,32 +27,6 @@ type Props = {
   dict: Dict;
 };
 
-// Silhouette SVG for photo placeholder
-function PersonPlaceholder() {
-  return (
-    <svg
-      viewBox="0 0 200 240"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full"
-    >
-      <rect width="200" height="240" fill="url(#grad)" />
-      <defs>
-        <linearGradient id="grad" x1="0" y1="0" x2="200" y2="240" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f0fdfa" />
-          <stop offset="100%" stopColor="#e0f2fe" />
-        </linearGradient>
-      </defs>
-      {/* Head */}
-      <circle cx="100" cy="82" r="34" fill="#99f6e4" />
-      {/* Body silhouette */}
-      <path
-        d="M30 240 C30 190 60 165 100 160 C140 165 170 190 170 240"
-        fill="#99f6e4"
-      />
-    </svg>
-  );
-}
 
 export default function Team({ dict }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -79,24 +54,28 @@ export default function Team({ dict }: Props) {
       specialty: dict.doctor_1_specialty,
       omd: dict.doctor_1_omd,
       isDirector: true,
+      image: "/team-1.jpg",
     },
     {
       name: dict.doctor_2_name,
       specialty: dict.doctor_2_specialty,
       omd: dict.doctor_2_omd,
       isDirector: false,
+      image: "/team-2.jpg",
     },
     {
       name: dict.doctor_3_name,
       specialty: dict.doctor_3_specialty,
       omd: dict.doctor_3_omd,
       isDirector: false,
+      image: "/team-3.jpg",
     },
     {
       name: dict.doctor_4_name,
       specialty: dict.doctor_4_specialty,
       omd: dict.doctor_4_omd,
       isDirector: false,
+      image: "/team-4.jpg",
     },
   ];
 
@@ -137,7 +116,12 @@ export default function Team({ dict }: Props) {
             >
               {/* Photo area */}
               <div className="relative h-64 overflow-hidden">
-                <PersonPlaceholder />
+                <Image
+                  src={doctor.image}
+                  alt={doctor.name}
+                  fill
+                  className="object-cover object-top"
+                />
                 {/* Director badge */}
                 {doctor.isDirector && (
                   <span className="absolute top-3 left-3 bg-teal-700 text-white text-xs font-medium px-2.5 py-1 rounded-full">

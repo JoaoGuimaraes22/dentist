@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type Dict = {
   badge: string;
@@ -93,22 +94,13 @@ export default function Technology({ dict }: Props) {
           >
             <div className="relative">
               {/* Main image */}
-              <div className="w-full h-96 lg:h-144 rounded-3xl bg-gray-50 border border-gray-200 flex flex-col items-center justify-center text-gray-300">
-                <svg
-                  className="w-14 h-14 mb-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
-                  />
-                </svg>
-                <p className="text-sm">Equipamento clínico</p>
-                <p className="text-xs mt-1 opacity-60">900 × 700</p>
+              <div className="relative w-full h-96 lg:h-144 rounded-3xl overflow-hidden">
+                <Image
+                  src="/technology.jpg"
+                  alt="Tecnologia clínica SorrisoPlus"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Floating label */}
