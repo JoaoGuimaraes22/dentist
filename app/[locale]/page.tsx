@@ -14,16 +14,16 @@ import Footer from "../components/Footer/Footer";
 import BookingBar from "../components/BookingBar/BookingBar";
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 };
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  const dict = await getDictionary(locale);
+  const dict = await getDictionary(locale as Locale);
 
   return (
     <>
-      <Navbar dict={dict.navbar} locale={locale} />
+      <Navbar dict={dict.navbar} locale={locale as Locale} />
       <main>
         <HeroContent dict={dict.hero} />
         <About dict={dict.about} />

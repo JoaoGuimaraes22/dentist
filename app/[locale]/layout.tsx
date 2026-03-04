@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import type { Locale } from "../../i18n-config";
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 };
 
 const BASE_URL = "https://sorrisoplus.pt";
@@ -11,7 +10,7 @@ const BASE_URL = "https://sorrisoplus.pt";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const isPt = locale === "pt";
